@@ -473,7 +473,8 @@
 }
 .skin-black-light .main-header .navbar-brand {
   color: #333;
-  border-right: 1px solid #eee;
+  border-left: 1px solid #eee;
+  border-right: none;
 }
 .skin-black-light .main-header .navbar {
   background-color: #ffffff;
@@ -500,21 +501,23 @@
 }
 .skin-black-light .main-header .navbar > .sidebar-toggle {
   color: #333;
-  border-right: 1px solid #eee;
+  border-left: 1px solid #eee;
+  border-right: none;
 }
 .skin-black-light .main-header .navbar .navbar-nav > li > a {
-  border-right: 1px solid #eee;
+  border-left: 1px solid #eee;
+  border-right: none;
 }
 .skin-black-light .main-header .navbar .navbar-custom-menu .navbar-nav > li > a,
 .skin-black-light .main-header .navbar .navbar-right > li > a {
-  border-left: 1px solid #eee;
-  border-right-width: 0;
+  border-right: 1px solid #eee;
+  border-left-width: 0;
 }
 .skin-black-light .main-header > .logo {
   background-color: #ffffff;
   color: #333333;
   border-bottom: 0 solid transparent;
-  border-right: 1px solid #eee;
+  border-left: 1px solid #eee;
 }
 .skin-black-light .main-header > .logo:hover {
   background-color: #fcfcfc;
