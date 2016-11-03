@@ -684,93 +684,17 @@ h6,
   }
   .navbar-custom-menu > .navbar-nav > li > .dropdown-menu {
     left: 5%;
-    left: auto;
+    right: auto;
   }
 }
 /*
  * Component: Form
  * ---------------
  */
-.form-control {
-  border-radius: 0;
-  box-shadow: none;
-  border-color: #d2d6de;
-}
-.form-control:focus {
-  border-color: #3c8dbc;
-  box-shadow: none;
-}
-.form-control::-moz-placeholder,
-.form-control:-ms-input-placeholder,
-.form-control::-webkit-input-placeholder {
-  color: #bbb;
-  opacity: 1;
-}
-.form-control:not(select) {
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-}
-.form-group.has-success label {
-  color: #00a65a;
-}
-.form-group.has-success .form-control,
-.form-group.has-success .input-group-addon {
-  border-color: #00a65a;
-  box-shadow: none;
-}
-.form-group.has-success .help-block {
-  color: #00a65a;
-}
-.form-group.has-warning label {
-  color: #f39c12;
-}
-.form-group.has-warning .form-control,
-.form-group.has-warning .input-group-addon {
-  border-color: #f39c12;
-  box-shadow: none;
-}
-.form-group.has-warning .help-block {
-  color: #f39c12;
-}
-.form-group.has-error label {
-  color: #dd4b39;
-}
-.form-group.has-error .form-control,
-.form-group.has-error .input-group-addon {
-  border-color: #dd4b39;
-  box-shadow: none;
-}
-.form-group.has-error .help-block {
-  color: #dd4b39;
-}
 /* Input group */
-.input-group .input-group-addon {
-  border-radius: 0;
-  border-color: #d2d6de;
-  background-color: #fff;
-}
 /* button groups */
-.btn-group-vertical .btn.btn-flat:first-of-type,
-.btn-group-vertical .btn.btn-flat:last-of-type {
-  border-radius: 0;
-}
 .icheck > label {
-  padding-left: 0;
-}
-/* support Font Awesome icons in form-control */
-.form-control-feedback.fa {
-  line-height: 34px;
-}
-.input-lg + .form-control-feedback.fa,
-.input-group-lg + .form-control-feedback.fa,
-.form-group-lg .form-control + .form-control-feedback.fa {
-  line-height: 46px;
-}
-.input-sm + .form-control-feedback.fa,
-.input-group-sm + .form-control-feedback.fa,
-.form-group-sm .form-control + .form-control-feedback.fa {
-  line-height: 30px;
+  padding-right: 0;
 }
 /*
  * Component: Progress Bar
@@ -2050,94 +1974,31 @@ table.text-center th {
  * Plugin: Full Calendar
  * ---------------------
  */
-.fc-button {
-  background: #f4f4f4;
-  background-image: none;
-  color: #444;
-  border-color: #ddd;
-  border-bottom-color: #ddd;
-}
-.fc-button:hover,
-.fc-button:active,
-.fc-button.hover {
-  background-color: #e9e9e9;
-}
 .fc-header-title h2 {
-  font-size: 15px;
-  line-height: 1.6em;
-  color: #666;
-  margin-left: 10px;
+  margin-right: 10px;
+  margin-left: auto;
 }
 .fc-header-right {
-  padding-right: 10px;
+  padding-left: 10px;
+  padding-right: 0;
 }
 .fc-header-left {
-  padding-left: 10px;
-}
-.fc-widget-header {
-  background: #fafafa;
-}
-.fc-grid {
-  width: 100%;
-  border: 0;
-}
-.fc-widget-header:first-of-type,
-.fc-widget-content:first-of-type {
-  border-left: 0;
-  border-right: 0;
+  padding-right: 10px;
+  padding-left: 0;
 }
 .fc-widget-header:last-of-type,
 .fc-widget-content:last-of-type {
-  border-right: 0;
-}
-.fc-toolbar {
-  padding: 10px;
-  margin: 0;
+  border-left: 0;
+  border-right: none;
 }
 .fc-day-number {
-  font-size: 20px;
-  font-weight: 300;
-  padding-right: 10px;
-}
-.fc-color-picker {
-  list-style: none;
-  margin: 0;
-  padding: 0;
+  padding-left: 10px;
+  padding-right: 0;
 }
 .fc-color-picker > li {
-  float: left;
-  font-size: 30px;
-  margin-right: 5px;
-  line-height: 30px;
-}
-.fc-color-picker > li .fa {
-  -webkit-transition: -webkit-transform linear 0.3s;
-  -moz-transition: -moz-transform linear 0.3s;
-  -o-transition: -o-transform linear 0.3s;
-  transition: transform linear 0.3s;
-}
-.fc-color-picker > li .fa:hover {
-  -webkit-transform: rotate(30deg);
-  -ms-transform: rotate(30deg);
-  -o-transform: rotate(30deg);
-  transform: rotate(30deg);
-}
-#add-new-event {
-  -webkit-transition: all linear 0.3s;
-  -o-transition: all linear 0.3s;
-  transition: all linear 0.3s;
-}
-.external-event {
-  padding: 5px 10px;
-  font-weight: bold;
-  margin-bottom: 4px;
-  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
-  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
-  border-radius: 3px;
-  cursor: move;
-}
-.external-event:hover {
-  box-shadow: inset 0 0 90px rgba(0, 0, 0, 0.2);
+  float: right;
+  margin-left: 5px;
+  margin-right: auto;
 }
 /*
  * Plugin: Select2
