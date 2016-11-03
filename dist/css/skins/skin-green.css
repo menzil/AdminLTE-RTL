@@ -77,6 +77,7 @@
   color: #ffffff;
   background: #1e282c;
   border-right-color: #00a65a;
+  border-left-color: transparent;
 }
 .skin-green .sidebar-menu > li > .treeview-menu {
   margin: 0 1px;
@@ -121,6 +122,7 @@
 }
 .skin-green .sidebar-form input[type="text"]:focus + .input-group-btn .btn {
   border-right-color: #fff;
+  border-left-color: transparent;
 }
 .skin-green .sidebar-form .btn {
   color: #999;

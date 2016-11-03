@@ -87,6 +87,7 @@
 .skin-black-light .content-wrapper,
 .skin-black-light .main-footer {
   border-right: 1px solid #d2d6de;
+  border-left: none;
 }
 .skin-black-light .user-panel > .info,
 .skin-black-light .user-panel > .info > a {
@@ -103,6 +104,7 @@
 }
 .skin-black-light .sidebar-menu > li > a {
   border-right: 3px solid transparent;
+  border-left: none;
   font-weight: 600;
 }
 .skin-black-light .sidebar-menu > li:hover > a,
@@ -161,6 +163,7 @@
 }
 .skin-black-light .sidebar-form input[type="text"]:focus + .input-group-btn .btn {
   border-right-color: #fff;
+  border-left-color: transparent;
 }
 .skin-black-light .sidebar-form .btn {
   color: #999;
@@ -171,6 +174,7 @@
 }
 @media (min-width: 768px) {
   .skin-black-light.sidebar-mini.sidebar-collapse .sidebar-menu > li > .treeview-menu {
-    border-left: 1px solid #d2d6de;
+    border-right: 1px solid #d2d6de;
+    border-left: none;
   }
 }

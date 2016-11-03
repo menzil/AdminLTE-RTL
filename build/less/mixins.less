@@ -64,6 +64,7 @@
     &:after,
     &:before {
       border-right-color: @bg-color;
+      border-left-color: transparent;
     }
   }
 }
@@ -144,6 +145,7 @@
       color: @sidebar-dark-hover-color;
       background: @sidebar-dark-hover-bg;
       border-right-color: @link-hover-border-color;
+      border-left-color: transparent;
     }
     //First Level Submenu
     > .treeview-menu {
@@ -191,6 +193,7 @@
       }
       &:focus + .input-group-btn .btn {
         border-right-color: #fff;
+        border-left-color: transparent;
 
       }
     }
@@ -212,6 +215,7 @@
   .content-wrapper,
   .main-footer {
     border-right: 1px solid @gray;
+    border-left: none;
   }
   //User Panel (resides in the sidebar)
   .user-panel {
@@ -231,6 +235,7 @@
     //links
     > a {
       border-right: 3px solid transparent;
+      border-left: none;
       font-weight: 600;
     }
     //Hover and active states
@@ -298,6 +303,7 @@
       }
       &:focus + .input-group-btn .btn {
         border-right-color: #fff;
+        border-left-color: transparent;
       }
     }
     .btn {
@@ -309,6 +315,7 @@
     &.sidebar-mini.sidebar-collapse {
       .sidebar-menu > li > .treeview-menu {
         border-right: 1px solid @gray;
+        border-left: none;
       }
     }
   }
