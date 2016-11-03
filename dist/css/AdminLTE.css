@@ -227,7 +227,7 @@ h6,
   }
   .sidebar-mini.sidebar-collapse .sidebar-menu > li:hover > a > .pull-right-container {
     float: left;
-    right: 200px!important;
+    right: 200px !important;
     left: auto !important;
   }
   .sidebar-mini.sidebar-collapse .sidebar-menu > li:hover > .treeview-menu {
@@ -670,12 +670,15 @@ h6,
  * Component: Direct Chat
  * ----------------------
  */
+.direct-chat-text {
+  margin: 5px 50px 0 0;
+}
 .direct-chat-text:after,
 .direct-chat-text:before {
   left: 100%;
   right: auto;
   border-left-color: #d2d6de;
-  border-color: transparent;
+  border-right-color: transparent;
 }
 .right .direct-chat-text {
   margin-left: 50px;

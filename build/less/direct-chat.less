@@ -5,13 +5,14 @@
 
 
 .direct-chat-text {
+  margin: 5px 50px 0 0;
   //Create the arrow
   &:after,
   &:before {
     left: 100%;
     right: auto;
     border-left-color: @direct-chat-default-msg-border-color;
-    border-color: transparent;
+    border-right-color: transparent;
   }
   .right & {
     margin-left: 50px;
