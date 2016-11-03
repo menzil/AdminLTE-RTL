@@ -63,23 +63,23 @@
 }
 .skin-green-light .content-wrapper,
 .skin-green-light .main-footer {
-  border-left: 1px solid #d2d6de;
+  border-right: 1px solid #d2d6de;
 }
 .skin-green-light .user-panel > .info,
 .skin-green-light .user-panel > .info > a {
   color: #444444;
 }
 .skin-green-light .sidebar-menu > li {
-  -webkit-transition: border-left-color 0.3s ease;
-  -o-transition: border-left-color 0.3s ease;
-  transition: border-left-color 0.3s ease;
+  -webkit-transition: border-right-color 0.3s ease;
+  -o-transition: border-right-color 0.3s ease;
+  transition: border-right-color 0.3s ease;
 }
 .skin-green-light .sidebar-menu > li.header {
   color: #848484;
   background: #f9fafc;
 }
 .skin-green-light .sidebar-menu > li > a {
-  border-left: 3px solid transparent;
+  border-right: 3px solid transparent;
   font-weight: 600;
 }
 .skin-green-light .sidebar-menu > li:hover > a,
@@ -88,7 +88,7 @@
   background: #f4f4f5;
 }
 .skin-green-light .sidebar-menu > li.active {
-  border-left-color: #00a65a;
+  border-right-color: #00a65a;
 }
 .skin-green-light .sidebar-menu > li.active > a {
   font-weight: 600;
@@ -126,10 +126,10 @@
 }
 .skin-green-light .sidebar-form input[type="text"] {
   color: #666;
-  border-top-left-radius: 2px;
-  border-top-right-radius: 0;
-  border-bottom-right-radius: 0;
-  border-bottom-left-radius: 2px;
+  border-top-right-radius: 2px;
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 2px;
 }
 .skin-green-light .sidebar-form input[type="text"]:focus,
 .skin-green-light .sidebar-form input[type="text"]:focus + .input-group-btn .btn {
@@ -137,14 +137,14 @@
   color: #666;
 }
 .skin-green-light .sidebar-form input[type="text"]:focus + .input-group-btn .btn {
-  border-left-color: #fff;
+  border-right-color: #fff;
 }
 .skin-green-light .sidebar-form .btn {
   color: #999;
-  border-top-left-radius: 0;
-  border-top-right-radius: 2px;
-  border-bottom-right-radius: 2px;
-  border-bottom-left-radius: 0;
+  border-top-right-radius: 0;
+  border-top-left-radius: 2px;
+  border-bottom-left-radius: 2px;
+  border-bottom-right-radius: 0;
 }
 @media (min-width: 768px) {
   .skin-green-light.sidebar-mini.sidebar-collapse .sidebar-menu > li > .treeview-menu {

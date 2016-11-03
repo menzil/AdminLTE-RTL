@@ -63,7 +63,7 @@
     color: @color;
     &:after,
     &:before {
-      border-left-color: @bg-color;
+      border-right-color: @bg-color;
     }
   }
 }
@@ -82,13 +82,13 @@
 @bottom-right
 )
 {
-  border-top-left-radius: @top-left
+  border-top-right-radius: @top-left
 ;
-  border-top-right-radius: @top-right
+  border-top-left-radius: @top-right
 ;
-  border-bottom-right-radius: @bottom-right
+  border-bottom-left-radius: @bottom-right
 ;
-  border-bottom-left-radius: @bottom-left
+  border-bottom-right-radius: @bottom-left
 ;
 }
 
@@ -96,8 +96,8 @@
 .gradient(@color: #F5F5F5, @start: #EEE, @stop: #FFF) {
   background: @color;
   background: -webkit-gradient(linear,
-  left bottom,
-  left top,
+  right bottom,
+  right top,
   color-stop(0, @start),
   color-stop(1, @stop));
   background: -ms-linear-gradient(bottom,
@@ -137,13 +137,13 @@
     }
     //links
     > a {
-      border-left: 3px solid transparent;
+      border-right: 3px solid transparent;
     }
     //Hover and active states
     &:hover > a, &.active > a {
       color: @sidebar-dark-hover-color;
       background: @sidebar-dark-hover-bg;
-      border-left-color: @link-hover-border-color;
+      border-right-color: @link-hover-border-color;
     }
     //First Level Submenu
     > .treeview-menu {
@@ -190,7 +190,7 @@
         color: #666;
       }
       &:focus + .input-group-btn .btn {
-        border-left-color: #fff;
+        border-right-color: #fff;
 
       }
     }
@@ -211,7 +211,7 @@
   }
   .content-wrapper,
   .main-footer {
-    border-left: 1px solid @gray;
+    border-right: 1px solid @gray;
   }
   //User Panel (resides in the sidebar)
   .user-panel {
@@ -221,7 +221,7 @@
   }
   //Sidebar Menu. First level links
   .sidebar-menu > li {
-    .transition(border-left-color .3s ease);
+    .transition(border-right-color .3s ease);
     //border-left: 3px solid transparent;
     //Section Headning
     &.header {
@@ -230,7 +230,7 @@
     }
     //links
     > a {
-      border-left: 3px solid transparent;
+      border-right: 3px solid transparent;
       font-weight: 600;
     }
     //Hover and active states
@@ -243,7 +243,7 @@
 
     }
     &.active {
-      border-left-color: @icon-active-color;
+      border-right-color: @icon-active-color;
       > a {
         font-weight: 600;
       }
@@ -297,7 +297,7 @@
         color: #666;
       }
       &:focus + .input-group-btn .btn {
-        border-left-color: #fff;
+        border-right-color: #fff;
       }
     }
     .btn {
@@ -308,7 +308,7 @@
   @media (min-width: @screen-sm-min) {
     &.sidebar-mini.sidebar-collapse {
       .sidebar-menu > li > .treeview-menu {
-        border-left: 1px solid @gray;
+        border-right: 1px solid @gray;
       }
     }
   }
