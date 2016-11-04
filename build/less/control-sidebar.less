@@ -16,6 +16,9 @@
 //The sidebar
 .control-sidebar {
   //Fix position after header collapse
+  @media (max-width: @screen-sm) {
+    padding-top: @navbar-height + 50;
+  }
   //Tab panes
   //Open state with slide over content effect
   &.control-sidebar-open {
@@ -75,6 +78,12 @@
     }
   }
   //Remove responsiveness on small screens
+  @media (max-width: @screen-sm) {
+   display: table;
+   > li {
+     display: table-cell;
+   }
+  }
 }
 
 //Headings in the sidebar content

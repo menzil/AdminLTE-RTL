@@ -18,8 +18,15 @@
       }
 
       //Modify the sidebar to shrink instead of disappearing
+      .main-sidebar {
+       //Don't go away! Just shrink
+       .translate(0, 0);
+       width: 50px !important;
+       z-index: 850;
+     }
       .sidebar-menu {
         > li {
+          position: relative;
           > a {
             margin-left: 0;
             margin-right: auto;
@@ -38,8 +45,9 @@
 
           > .treeview-menu {
             //Add some padding to the treeview menu
-            border-bottom-left-radius: 4px;
-            border-bottom-right-radius: 0;
+            padding-top: 5px;
+            padding-bottom: 5px;
+            border-bottom-right-radius: 4px;
           }
 
           //Show menu items on hover
@@ -49,12 +57,16 @@
             }
             > a > span:not(.pull-right),//:not(.pull-right-container),
             > .treeview-menu {
+              display: block !important;
+              position: absolute;
+              width: @sidebar-width - 50;
               right: 50px;
               left: auto;
             }
 
             //position the header & treeview menus
             > a > span {
+              top: 0;
               margin-right: -3px;
               margin-left: auto;
               padding: 12px 20px 12px 5px;
@@ -62,17 +74,46 @@
             > a > .pull-right-container {
               //display: block!important;
               float: left;
+              width: auto!important;
               right: 200px !important;
-              left: auto !important
+              left: auto !important;
+              > .label:not(:first-of-type) {
+               display: none;
+             }
             }
             > .treeview-menu {
+              top: 44px;
               margin-right: 0;
               margin-left: auto;
             }
           }
         }
       }
+      //Make the sidebar links, menus, labels, badges
+     //and angle icons disappear
+     .main-sidebar .user-panel > .info,
+     .sidebar-form,
+     .sidebar-menu > li > a > span,
+     .sidebar-menu > li > .treeview-menu,
+     .sidebar-menu > li > a > .pull-right,
+     .sidebar-menu li.header {
+       display: none !important;
+       -webkit-transform: translateZ(0);
+     }
       .main-header {
+        //Let's make the logo also shrink and the mini logo to appear
+        .logo {
+          width: 50px;
+          > .logo-mini {
+            display: block;
+            margin-left: -15px;
+            margin-right: -15px;
+            font-size: 18px;
+          }
+          > .logo-lg {
+            display: none;
+          }
+        }
         //Since the logo got smaller, we need to fix the navbar's position
         .navbar {
           margin-right: 50px;
