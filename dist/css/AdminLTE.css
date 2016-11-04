@@ -128,6 +128,9 @@ h6,
   }
 }
 @media (max-width: 767px) {
+  .main-header .navbar {
+    margin: 0;
+  }
   .main-header .navbar-custom-menu {
     float: left;
   }
