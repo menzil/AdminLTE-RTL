@@ -1,5 +1,6 @@
 # AdminLTE-RTL
-AdminLTE-RTL version
+AdminLTE-RTL version, [forked from almasaeed2010/AdminLTE](https://github.com/almasaeed2010/AdminLTE/)
+
 
 
 ## changes
