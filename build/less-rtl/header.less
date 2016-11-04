@@ -1,0 +1,159 @@
+/*
+ * Component: Main Header
+ * ----------------------
+ */
+
+.main-header {
+  //Navbar
+  .navbar {
+    .transition(margin-right @transition-speed @transition-fn);
+    margin-right: @sidebar-width;
+    margin-left: auto;
+    .layout-top-nav & {
+      margin-right: 0;
+      margin-left: auto;
+    }
+  }
+  //Navbar search text input
+
+  //Navbar Right Menu
+  .navbar-custom-menu,
+  .navbar-right {
+    float: left;
+    @media (max-width: @screen-sm-max) {
+      a {
+        color: inherit;
+        background: transparent;
+      }
+    }
+  }
+  .navbar-right {
+    @media (max-width: @screen-header-collapse) {
+      float: none;
+      .navbar-collapse & {
+        margin: 7.5px -15px;
+      }
+
+      > li {
+        color: inherit;
+        border: 0;
+      }
+    }
+  }
+  //Navbar toggle button
+  .sidebar-toggle {
+    float: right;
+  }
+  //Navbar User Menu
+  .navbar .nav > li.user > a {
+    > .fa,
+    > .glyphicon,
+    > .ion {
+      margin-left: 5px;
+      margin-right: auto;
+    }
+  }
+
+  //Labels in navbar
+  .navbar .nav > li > a > .label {
+    left: 7px;
+    right: auto;
+  }
+
+  //Logo bar
+  .logo {
+    float: right;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    //Add support to sidebar mini by allowing the user to create
+    //2 logo designs. mini and lg
+  }
+  //Navbar Brand. Alternative logo with layout-top-nav
+}
+
+// Content Header
+.content-header {
+  // Header Text
+  > h1 {
+    > small {
+      padding-right: 4px;
+    }
+  }
+
+  > .breadcrumb {
+    float: left;
+    left: 10px;
+    right: auto;
+    > li > a {
+      > .fa, > .glyphicon, > .ion {
+        margin-left: 5px;
+        margin-right: auto;
+      }
+    }
+  }
+
+  @media (max-width: @screen-sm-max) {
+    > .breadcrumb {
+      position: relative;
+      margin-top: 5px;
+      top: 0;
+      left: 0;
+      right: auto;
+      float: none;
+      background: @gray;
+      padding-right: 10px;
+      padding-left: 0;
+      li:before {
+        color: darken(@gray, 20%);
+      }
+    }
+  }
+}
+
+//Control navbar scaffolding on x-small screens
+@media (max-width: @screen-sm-max) {
+  .navbar-custom-menu .navbar-nav > li {
+    float: right;
+  }
+
+  //Dont't let links get full width
+  .navbar-custom-menu .navbar-nav {
+    margin: 0;
+    float: right;
+  }
+  .navbar-custom-menu .navbar-nav > li > a {
+    padding-top: 15px;
+    padding-bottom: 15px;
+    line-height: 20px;
+  }
+}
+
+// Collapse header
+@media (max-width: @screen-header-collapse) {
+  .main-header {
+    position: relative;
+    .logo,
+    .navbar {
+      width: 100%;
+      float: none;
+    }
+    .navbar {
+      margin: 0;
+    }
+    .navbar-custom-menu {
+      float: left;
+    }
+  }
+}
+
+.navbar-collapse.pull-left {
+  @media (max-width: @screen-sm-max) {
+    float: none !important;
+    + .navbar-custom-menu {
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 40px;
+      right: auto;
+    }
+  }
+}

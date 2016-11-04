@@ -13,33 +13,31 @@
       .content-wrapper,
       .right-side,
       .main-footer {
-        margin-right: 50px !important;
-        margin-left: auto !important;
+        margin-left: 50px !important;
+        z-index: 840;
       }
 
       //Modify the sidebar to shrink instead of disappearing
       .main-sidebar {
-       //Don't go away! Just shrink
-       .translate(0, 0);
-       width: 50px !important;
-       z-index: 850;
-     }
+        //Don't go away! Just shrink
+        .translate(0, 0);
+        width: 50px !important;
+        z-index: 850;
+      }
+
       .sidebar-menu {
         > li {
           position: relative;
           > a {
-            margin-left: 0;
-            margin-right: auto;
+            margin-right: 0;
           }
           > a > span {
-            border-top-left-radius: 4px;
-            border-top-right-radius: 0;
+            border-top-right-radius: 4px;
           }
 
           &:not(.treeview) {
             > a > span {
-              border-bottom-left-radius: 4px;
-              border-bottom-right-radius: 0;
+              border-bottom-right-radius: 4px;
             }
           }
 
@@ -60,46 +58,46 @@
               display: block !important;
               position: absolute;
               width: @sidebar-width - 50;
-              right: 50px;
-              left: auto;
+              left: 50px;
             }
 
             //position the header & treeview menus
             > a > span {
               top: 0;
-              margin-right: -3px;
-              margin-left: auto;
-              padding: 12px 20px 12px 5px;
+              margin-left: -3px;
+              padding: 12px 5px 12px 20px;
+              background-color: inherit;
             }
             > a > .pull-right-container {
               //display: block!important;
-              float: left;
+              float: right;
               width: auto!important;
-              right: 200px !important;
-              left: auto !important;
+              left: 200px!important;
+              top: 10px!important;
               > .label:not(:first-of-type) {
-               display: none;
-             }
+                display: none;
+              }
             }
             > .treeview-menu {
               top: 44px;
-              margin-right: 0;
-              margin-left: auto;
+              margin-left: 0;
             }
           }
         }
       }
+
       //Make the sidebar links, menus, labels, badges
-     //and angle icons disappear
-     .main-sidebar .user-panel > .info,
-     .sidebar-form,
-     .sidebar-menu > li > a > span,
-     .sidebar-menu > li > .treeview-menu,
-     .sidebar-menu > li > a > .pull-right,
-     .sidebar-menu li.header {
-       display: none !important;
-       -webkit-transform: translateZ(0);
-     }
+      //and angle icons disappear
+      .main-sidebar .user-panel > .info,
+      .sidebar-form,
+      .sidebar-menu > li > a > span,
+      .sidebar-menu > li > .treeview-menu,
+      .sidebar-menu > li > a > .pull-right,
+      .sidebar-menu li.header {
+        display: none !important;
+        -webkit-transform: translateZ(0);
+      }
+
       .main-header {
         //Let's make the logo also shrink and the mini logo to appear
         .logo {
@@ -114,10 +112,10 @@
             display: none;
           }
         }
+
         //Since the logo got smaller, we need to fix the navbar's position
         .navbar {
-          margin-right: 50px;
-          margin-left: auto;
+          margin-left: 50px;
         }
       }
     }
@@ -125,9 +123,29 @@
 }
 
 //A fix for text overflow while transitioning from sidebar mini to full sidebar
+.sidebar-menu,
+.main-sidebar .user-panel,
+.sidebar-menu > li.header {
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.sidebar-menu:hover {
+  overflow: visible;
+}
+
+.sidebar-form,
+.sidebar-menu > li.header {
+  overflow: hidden;
+  text-overflow: clip;
+}
+
 .sidebar-menu li > a {
+  position: relative;
   > .pull-right-container {
-    left: 10px;
-    right: auto;
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    margin-top: -7px;
   }
 }

@@ -1,0 +1,29 @@
+/*
+ * Component: Button
+ * -----------------
+ */
+
+.btn {
+  // input file btn
+  &.btn-file {
+    > input[type='file'] {
+      left: 0;
+      right: auto;
+      text-align: left;
+    }
+  }
+}
+
+//Button color variations
+
+// Application buttons
+.btn-app {
+  .border-radius(3px);
+  margin: 0 10px 10px 0;
+  //Icons within the btn
+  //The badge
+  > .badge {
+    left: -10px;
+    right: auto;
+  }
+}

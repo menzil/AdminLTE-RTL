@@ -63,8 +63,7 @@
     color: @color;
     &:after,
     &:before {
-      border-right-color: @bg-color;
-      border-left-color: transparent;
+      border-left-color: @bg-color;
     }
   }
 }
@@ -83,13 +82,13 @@
 @bottom-right
 )
 {
-  border-top-right-radius: @top-left
+  border-top-left-radius: @top-left
 ;
-  border-top-left-radius: @top-right
+  border-top-right-radius: @top-right
 ;
-  border-bottom-left-radius: @bottom-right
+  border-bottom-right-radius: @bottom-right
 ;
-  border-bottom-right-radius: @bottom-left
+  border-bottom-left-radius: @bottom-left
 ;
 }
 
@@ -97,8 +96,8 @@
 .gradient(@color: #F5F5F5, @start: #EEE, @stop: #FFF) {
   background: @color;
   background: -webkit-gradient(linear,
-  right bottom,
-  right top,
+  left bottom,
+  left top,
   color-stop(0, @start),
   color-stop(1, @stop));
   background: -ms-linear-gradient(bottom,
@@ -138,14 +137,13 @@
     }
     //links
     > a {
-      border-right: 3px solid transparent;
+      border-left: 3px solid transparent;
     }
     //Hover and active states
     &:hover > a, &.active > a {
       color: @sidebar-dark-hover-color;
       background: @sidebar-dark-hover-bg;
-      border-right-color: @link-hover-border-color;
-      border-left-color: transparent;
+      border-left-color: @link-hover-border-color;
     }
     //First Level Submenu
     > .treeview-menu {
@@ -192,8 +190,7 @@
         color: #666;
       }
       &:focus + .input-group-btn .btn {
-        border-right-color: #fff;
-        border-left-color: transparent;
+        border-left-color: #fff;
 
       }
     }
@@ -214,8 +211,7 @@
   }
   .content-wrapper,
   .main-footer {
-    border-right: 1px solid @gray;
-    border-left: none;
+    border-left: 1px solid @gray;
   }
   //User Panel (resides in the sidebar)
   .user-panel {
@@ -225,7 +221,7 @@
   }
   //Sidebar Menu. First level links
   .sidebar-menu > li {
-    .transition(border-right-color .3s ease);
+    .transition(border-left-color .3s ease);
     //border-left: 3px solid transparent;
     //Section Headning
     &.header {
@@ -234,8 +230,7 @@
     }
     //links
     > a {
-      border-right: 3px solid transparent;
-      border-left: none;
+      border-left: 3px solid transparent;
       font-weight: 600;
     }
     //Hover and active states
@@ -248,7 +243,7 @@
 
     }
     &.active {
-      border-right-color: @icon-active-color;
+      border-left-color: @icon-active-color;
       > a {
         font-weight: 600;
       }
@@ -302,8 +297,7 @@
         color: #666;
       }
       &:focus + .input-group-btn .btn {
-        border-right-color: #fff;
-        border-left-color: transparent;
+        border-left-color: #fff;
       }
     }
     .btn {
@@ -314,8 +308,7 @@
   @media (min-width: @screen-sm-min) {
     &.sidebar-mini.sidebar-collapse {
       .sidebar-menu > li > .treeview-menu {
-        border-right: 1px solid @gray;
-        border-left: none;
+        border-left: 1px solid @gray;
       }
     }
   }

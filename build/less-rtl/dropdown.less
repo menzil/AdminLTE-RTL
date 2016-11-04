@@ -1,0 +1,115 @@
+/*
+ * Component: Dropdown menus
+ * -------------------------
+ */
+
+/*Dropdowns in general*/
+
+
+//Navbar custom dropdown menu
+
+
+  //Define footer class
+  > .dropdown-menu > li.footer > a {
+    @media (max-width: @screen-sm-max) {
+      background: #fff !important;
+      color: #444 !important;
+    }
+  }
+
+//Notifications menu
+
+
+//Messages menu
+.navbar-nav > .messages-menu {
+  //Inner menu
+  > .dropdown-menu > li .menu {
+    // Messages menu item
+    > li > a {
+      // Message heading
+      > h4 {
+        // Small for message time display
+        > small {
+          left: 0;
+          right: auto;
+        }
+      }
+
+      > p {
+        margin: 0 45px 0 0;
+      }
+    }
+  }
+}
+
+
+//User menu
+.navbar-nav > .user-menu {
+  > .dropdown-menu {
+   // Header menu
+   // Menu Body
+   > .user-body {
+     a {
+       @media (max-width: @screen-sm-max) {
+         background: #fff !important;
+         color: #444 !important;
+       }
+     }
+   }
+
+   // Menu Footer
+   > .user-footer {
+     background-color: #f9f9f9;
+     padding: 10px;
+     .clearfix();
+     .btn-default {
+       color: #666666;
+       &:hover {
+         @media (max-width: @screen-sm-max) {
+           background-color: #f9f9f9;
+         }
+       }
+     }
+   }
+ }
+
+  .user-image {
+    float: right;
+    margin-right: 10px;
+    @media (max-width: @screen-xs-max) {
+      float: none;
+      margin-left: 0;
+      margin-right: auto;
+      line-height: 10px;
+    }
+  }
+}
+
+/* Add fade animation to dropdown menus by appending
+ the class .animated-dropdown-menu to the .dropdown-menu ul (or ol)*/
+
+
+/* Fix dropdown menu in navbars */
+.navbar-custom-menu > .navbar-nav {
+  > li {
+    > .dropdown-menu {
+      left: 0;
+      right: auto;
+    }
+  }
+}
+
+@media (max-width: @screen-sm-max) {
+  .navbar-custom-menu > .navbar-nav {
+    float: left;
+    > li {
+      > .dropdown-menu {
+        position: absolute;
+        left: 5%;
+        right: auto;
+        border: 1px solid #ddd;
+        background: #fff;
+      }
+    }
+  }
+}

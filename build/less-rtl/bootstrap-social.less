@@ -1,0 +1,36 @@
+/*
+ * Social Buttons for Bootstrap
+ *
+ * Copyright 2013-2015 Panayiotis Lipiridis
+ * Licensed under the MIT License
+ *
+ * https://github.com/lipis/bootstrap-social
+ */
+
+@bs-height-base: (@line-height-computed + @padding-base-vertical * 2);
+@bs-height-lg: (floor(@font-size-large * @line-height-base) + @padding-large-vertical * 2);
+@bs-height-sm: (floor(@font-size-small * 1.5) + @padding-small-vertical * 2);
+@bs-height-xs: (floor(@font-size-small * 1.2) + @padding-small-vertical + 1);
+
+.btn-social {
+  position: relative;
+  padding-right: (@bs-height-base + @padding-base-horizontal);
+  padding-left: 0;
+  text-align: right;
+  > :first-child {
+    right: 0;
+    left: auto;
+  }
+  &.btn-lg {
+    padding-right: (@bs-height-lg + @padding-large-horizontal);
+    padding-left: 0;
+  }
+  &.btn-sm {
+    padding-right: (@bs-height-sm + @padding-small-horizontal);
+    padding-left: 0;
+  }
+  &.btn-xs {
+    padding-right: (@bs-height-xs + @padding-small-horizontal);
+    padding-left: 0;
+  }
+}

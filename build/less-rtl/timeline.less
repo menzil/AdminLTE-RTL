@@ -1,0 +1,36 @@
+/*
+ * Component: Timeline
+ * -------------------
+ */
+
+.timeline {
+  // The line
+  &:before {
+    right: 31px;
+    left: auto;
+  }
+
+  > li {
+    margin-left: 10px;
+    margin-right: auto;
+
+    // The content
+    > .timeline-item {
+      margin-right: 60px;
+      margin-left: 15px;
+      // The time and header
+      > .time {
+        float: left;
+      }
+      // Item body and footer
+    }
+
+    // The icons
+    > .fa,
+    > .glyphicon,
+    > .ion {
+      right: 18px;
+      left: auto;;
+    }
+  }
+}

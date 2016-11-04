@@ -1,0 +1,71 @@
+/*
+ * General: Miscellaneous
+ * ----------------------
+ */
+// 10px padding and margins
+
+.margin-r-5 {
+  margin-left: 5px;
+  margin-right: auto;
+}
+//User block
+.user-block {
+  .clearfix();
+  img {
+    float: right;
+  }
+  .username,
+  .description,
+  .comment {
+    margin-right: 50px;
+    margin-left: auto;
+  }
+  &.user-block-sm {
+    .username,
+    .description,
+    .comment {
+      margin-right: 40px;
+      margin-left: auto;
+    }
+  }
+}
+
+//Image sizes
+.img-sm,
+.img-md,
+.img-lg {
+  float: right;
+}
+
+.img-sm {
+  + .img-push {
+    margin-right: 40px;
+    margin-left: auto;
+  }
+}
+
+.img-md {
+  + .img-push {
+    margin-right: 70px;
+    margin-left: auto;
+  }
+}
+
+.img-lg {
+  + .img-push {
+    margin-right: 110px;
+    margin-left: auto;
+  }
+}
+
+
+//General attachemnt block
+.attachment-block {
+  .attachment-img {
+    float: right;
+  }
+  .attachment-pushed {
+    margin-right: 110px;
+    margin-left: auto;
+  }
+}

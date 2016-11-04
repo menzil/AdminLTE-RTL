@@ -1,0 +1,70 @@
+/*
+ * Component: Direct Chat
+ * ----------------------
+ */
+
+
+.direct-chat-text {
+  margin: 5px 50px 0 0;
+  //Create the arrow
+  &:after,
+  &:before {
+    left: 100%;
+    right: auto;
+    border-left-color: @direct-chat-default-msg-border-color;
+    border-right-color: transparent;
+  }
+  .right & {
+    margin-left: 50px;
+    margin-right: 0;
+    &:after,
+    &:before {
+      left: auto;
+      right: 100%;
+      border-left-color: transparent;
+      border-right-color: @direct-chat-default-msg-border-color;
+    }
+  }
+}
+
+.direct-chat-img {
+  .border-radius(50%);
+  float: right;
+  .right & {
+    float: left;
+  }
+}
+
+//Contacts list -- for displaying contacts in direct chat contacts pane
+
+
+.contacts-list-img {
+  .border-radius(50%);
+  float: right;
+}
+
+.contacts-list-info {
+  margin-right: 45px;
+  margin-left: auto;
+}
+
+//Direct Chat Variants
+.direct-chat-danger {
+  .direct-chat-variant(@red);
+}
+
+.direct-chat-primary {
+  .direct-chat-variant(@light-blue);
+}
+
+.direct-chat-warning {
+  .direct-chat-variant(@yellow);
+}
+
+.direct-chat-info {
+  .direct-chat-variant(@aqua);
+}
+
+.direct-chat-success {
+  .direct-chat-variant(@green);
+}

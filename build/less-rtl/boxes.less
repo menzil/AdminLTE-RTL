@@ -1,0 +1,171 @@
+/*
+ * Component: Box
+ * --------------
+ */
+.box {
+  // Box color variations
+  // fixed height to 300px
+  .border-right {
+    border-left: 1px solid @box-border-color;
+    border-right: none;
+  }
+  .border-left {
+    border-right: 1px solid @box-border-color;
+    border-left: none;
+  }
+}
+
+.box,
+.overlay-wrapper {
+  // Box overlay for LOADING STATE effect
+  > .overlay,
+  > .loading-img {
+    left: 0;
+    right: auto;
+  }
+
+  .overlay {
+
+    .border-radius(@box-border-radius);
+    > .fa {
+      right: 50%;
+      left: auto;
+      margin-right: -15px;
+      margin-left: auto;
+    }
+  }
+}
+
+//Box header
+.box-header {
+
+
+  //Icons and box title
+  > .fa,
+  > .glyphicon,
+  > .ion {
+    margin-left: 5px;
+    margin-right: auto;
+  }
+  > .box-tools {
+    left: 10px;
+    right: auto;
+    &.pull-right {
+      .dropdown-menu {
+        left: 0;
+        right: auto;
+      }
+    }
+  }
+}
+
+//Box footer
+.chart-legend {
+  > li {
+    @media (max-width: @screen-sm-max) {
+      float: right;
+      margin-left: 10px;
+      margin-right: auto;
+    }
+  }
+}
+
+//Comment Box
+.box-comments {
+
+  .box-comment {
+    .clearfix();
+    img {
+      &:extend(.img-sm);
+      float: right;
+    }
+  }
+  .comment-text {
+    margin-right: 40px;
+    margin-left: auto;
+  }
+}
+
+//Widgets
+//-----------
+
+/* Widget: TODO LIST */
+
+.todo-list {
+  // Todo list element
+  > li {
+
+    border-right: 2px solid #e6e7e8;
+    border-left: none;
+    > input[type='checkbox'] {
+      margin: 0 5px 0 10px;
+    }
+    .text {
+      margin-right: 5px;
+      margin-left: auto;
+    }
+
+    // Time labels
+    .label {
+      margin-right: 10px;
+      margin-left: auto;
+    }
+
+    // Tools and options box
+    .tools {
+      float: left;
+      // icons
+      > .fa, > .glyphicon, > .ion {
+        margin-left: 5px;
+        margin-right: auto;
+      }
+
+    }
+  }
+
+  // Color varaity
+  .danger {
+    border-right-color: @red;
+    border-left-color: transparent;
+  }
+  .warning {
+    border-right-color: @yellow;
+    border-left-color: transparent;
+  }
+  .info {
+    border-right-color: @aqua;
+    border-left-color: transparent;
+  }
+  .success {
+    border-right-color: @green;
+    border-left-color: transparent;
+  }
+  .primary {
+    border-right-color: @light-blue;
+    border-left-color: transparent;
+  }
+}
+
+// END TODO WIDGET
+
+/* Chat widget (DEPRECATED - this will be removed in the next major release. Use Direct Chat instead)*/
+.chat {
+  padding: 5px 10px 5px 20px;
+
+  .item {
+    // The message body
+    > .message {
+      margin-right: 55px;
+      margin-left: auto;
+    }
+
+    // The attachment
+    > .attachment {
+      .border-radius(@attachment-border-radius);
+      margin-right: 65px;
+      margin-left: 15px;
+    }
+  }
+
+}
+//END CHAT WIDGET

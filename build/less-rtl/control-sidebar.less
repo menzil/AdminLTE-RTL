@@ -1,0 +1,157 @@
+/*
+ * Component: Control sidebar. By default, this is the right sidebar.
+ */
+//The sidebar's background control class
+//This is a hack to make the background visible while scrolling
+
+
+//Transitions
+.control-sidebar-bg,
+.control-sidebar {
+  left: -@control-sidebar-width;
+  right: auto;
+  .transition(right @transition-speed ease-in-out);
+}
+
+//The sidebar
+.control-sidebar {
+  //Fix position after header collapse
+  @media (max-width: @screen-sm) {
+    padding-top: @navbar-height + 50;
+  }
+  //Tab panes
+  //Open state with slide over content effect
+  &.control-sidebar-open {
+    &,
+    + .control-sidebar-bg {
+      left: 0;
+      right: auto;
+    }
+  }
+}
+
+//Open without slide over content
+.control-sidebar-open {
+  .control-sidebar-bg,
+  .control-sidebar {
+    left: 0;
+    right: auto;
+  }
+  @media (min-width: @screen-sm) {
+    .content-wrapper,
+    .right-side,
+    .main-footer {
+      margin-left: @control-sidebar-width;
+      margin-right: auto;
+    }
+  }
+}
+
+//Control sidebar tabs
+.nav-tabs.control-sidebar-tabs {
+  > li {
+    &:first-of-type > a {
+      &,
+      &:hover,
+      &:focus {
+        border-right-width: 0;
+      }
+    }
+    > a {
+      //Hover and active states
+      &,
+      &:hover {
+        border-left: none;
+        border-right: 1px solid transparent;
+      }
+    }
+    //Active state
+    &.active {
+      > a {
+        &,
+        &:hover,
+        &:focus,
+        &:active {
+          border-left: none;
+        }
+      }
+    }
+  }
+  //Remove responsiveness on small screens
+  @media (max-width: @screen-sm) {
+   display: table;
+   > li {
+     display: table-cell;
+   }
+  }
+}
+
+//Headings in the sidebar content
+//Subheadings
+
+//Control Sidebar Menu
+.control-sidebar-menu {
+  .menu-icon {
+    float: right;
+  }
+  .menu-info {
+    margin-right: 45px;
+    margin-left: auto;
+  }
+}
+
+//Dark skin
+.control-sidebar-dark {
+  // Background
+  &,
+  + .control-sidebar-bg {
+    background: @sidebar-dark-bg;
+  }
+  // Sidebar tabs
+  .nav-tabs.control-sidebar-tabs {
+    border-bottom: darken(@sidebar-dark-bg, 3%);
+    > li {
+      > a {
+        //Hover and active states
+        &,
+        &:hover,
+        &:focus {
+          border-right-color: darken(@sidebar-dark-bg, 7%);
+        }
+      }
+      //Active state
+    }
+  }
+  //Heading & subheading
+  //Sidebar list
+}
+
+//Light skin
+.control-sidebar-light {
+  // Background
+  &,
+  + .control-sidebar-bg {
+    border-right: 1px solid @gray;
+    border-left: none;
+  }
+  // Sidebar tabs
+  .nav-tabs.control-sidebar-tabs {
+    > li {
+      > a {
+        &,
+        &:hover,
+        &:focus {
+          border-right-color: @gray;
+          border-left-color: transparent;
+        }
+      }
+      //Active state
+    }
+  }
+  //Heading & subheading
+  //Sidebar list
+  .control-sidebar-menu {
+    margin-right: -14px;
+    margin-left: auto;
+  }
+}

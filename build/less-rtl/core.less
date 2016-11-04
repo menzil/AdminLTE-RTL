@@ -1,0 +1,78 @@
+/*
+ * Core: General Layout Style
+ * -------------------------
+ */
+body {
+  font-family: 'Source Sans Pro', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+/* Layout */
+/*
+ * Content Wrapper - contains the main content
+ * ```.right-side has been deprecated as of v2.0.0 in favor of .content-wrapper  ```
+ */
+.content-wrapper,
+.right-side,
+.main-footer {
+  //Using disposable variable to join statements with a comma
+  @transition-rule: @transition-speed @transition-fn,
+  margin @transition-speed @transition-fn;
+  .transition-transform(@transition-rule);
+  margin-right: @sidebar-width;
+  margin-left: auto;
+  //Top nav layout
+  .layout-top-nav & {
+    margin-right: 0;
+    margin-left: auto;
+  }
+  @media (max-width: @screen-xs-max) {
+    margin-right: 0;
+    margin-left: auto;
+  }
+  //When opening the sidebar on large screens
+  .sidebar-collapse & {
+    @media (min-width: @screen-sm) {
+      margin-right: 0;
+      margin-left: auto;
+    }
+  }
+  //When opening the sidebar on small screens
+  .sidebar-open & {
+    @media (max-width: @screen-xs-max) {
+      .translate(-@sidebar-width, 0);
+    }
+  }
+}
+/* Fixed layout */
+/* Fixed layout */
+.fixed {
+  .content-wrapper,
+  .right-side {
+    padding-top: 50px;
+    @media (max-width: @screen-header-collapse) {
+      padding-top: 100px;
+    }
+  }
+}
+
+
+
+
+/* H1 - H6 font */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6 {
+  font-family: 'Source Sans Pro', sans-serif;
+}
+
+/* General Links */
+/* Page Header */

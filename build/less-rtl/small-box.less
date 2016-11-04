@@ -1,0 +1,25 @@
+/*
+ * Component: Small Box
+ * --------------------
+ */
+
+.small-box {
+  // the icon
+  .icon {
+    .transition(all @transition-speed linear);
+    left: 10px;
+    right: auto;
+  }
+}
+@media (max-width: @screen-xs-max) {
+  // No need for icons on very small devices
+  .small-box {
+    text-align: center;
+    .icon {
+      display: none;
+    }
+    p {
+      font-size: 12px;
+    }
+  }
+}

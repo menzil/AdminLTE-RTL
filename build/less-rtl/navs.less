@@ -1,0 +1,74 @@
+/*
+ * Component: Nav
+ * --------------
+ */
+/* NAV PILLS */
+.nav-pills {
+  > li > a {
+    > .fa,
+    > .glyphicon,
+    > .ion {
+      margin-left: 5px;
+      margin-right: auto;
+    }
+  }
+}
+
+/* NAV STACKED */
+.nav-stacked {
+  > li > a {
+    border-right: 3px solid transparent;
+    border-left: none;
+  }
+  > li.active > a,
+  > li.active > a:hover {
+    border-right-color: @light-blue;
+    border-left-color: transparent;
+  }
+}
+
+/* NAV TABS */
+.nav-tabs-custom {
+  > .nav-tabs {
+    > li {
+      margin-left: 5px;
+      margin-right: auto;
+    }
+
+
+    > li:first-of-type {
+      margin-right: 0;
+      margin-left: auto;
+    }
+
+    //Pulled to the right
+    &.pull-right {
+      > li {
+        float: left;
+      }
+      > li:first-of-type {
+        margin-left: 0;
+        margin-right: auto;
+        > a {
+          border-right-width: 1px;
+          border-left-width: 0;
+        }
+        &.active {
+          > a {
+            border-right-color: #f4f4f4;
+            border-left-color: transparent;
+          }
+        }
+      }
+    }
+
+    > li.header {
+      > .fa,
+      > .glyphicon,
+      > .ion {
+        margin-left: 5px;
+        margin-right: 0;
+      }
+    }
+  }
+}
