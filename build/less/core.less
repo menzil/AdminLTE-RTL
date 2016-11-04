@@ -15,6 +15,9 @@ body {
 .right-side,
 .main-footer {
   //Using disposable variable to join statements with a comma
+  @transition-rule: @transition-speed @transition-fn,
+  margin @transition-speed @transition-fn;
+  .transition-transform(@transition-rule);
   margin-right: @sidebar-width;
   margin-left: auto;
   //Top nav layout
@@ -34,9 +37,28 @@ body {
     }
   }
   //When opening the sidebar on small screens
+  .sidebar-open & {
+    @media (max-width: @screen-xs-max) {
+      .translate(-@sidebar-width, 0);
+    }
+  }
 }
 
 /* Fixed layout */
+
+/* Fixed layout */
+.fixed {
+  .content-wrapper,
+  .right-side {
+    padding-top: 50px;
+    @media (max-width: @screen-header-collapse) {
+      padding-top: 100px;
+    }
+  }
+}
+
+
+
 
 /* H1 - H6 font */
 h1,

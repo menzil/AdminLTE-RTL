@@ -9,6 +9,26 @@
 .left-side {
   right: 0;
   left: auto;
+  //Using disposable variable to join statements with a comma
+  @transition-rule: @transition-speed @transition-fn,
+  width @transition-speed @transition-fn;
+  .transition-transform(@transition-rule);
+  @media (max-width: @screen-header-collapse) {
+    padding-top: 100px;
+  }
+  @media (max-width: @screen-xs-max) {
+    .translate(@sidebar-width, 0);
+  }
+  .sidebar-collapse & {
+    @media (min-width: @screen-sm) {
+      .translate(@sidebar-width, 0);
+    }
+  }
+  .sidebar-open & {
+    @media (max-width: @screen-xs-max) {
+      .translate(0, 0);
+    }
+  }
 }
 
 //Sidebar user panel

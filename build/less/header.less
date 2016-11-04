@@ -20,6 +20,25 @@
   .navbar-custom-menu,
   .navbar-right {
     float: left;
+    @media (max-width: @screen-sm-max) {
+      a {
+        color: inherit;
+        background: transparent;
+      }
+    }
+  }
+  .navbar-right {
+    @media (max-width: @screen-header-collapse) {
+      float: none;
+      .navbar-collapse & {
+        margin: 7.5px -15px;
+      }
+
+      > li {
+        color: inherit;
+        border: 0;
+      }
+    }
   }
   //Navbar toggle button
   .sidebar-toggle {
@@ -74,8 +93,18 @@
 
   @media (max-width: @screen-sm-max) {
     > .breadcrumb {
+      position: relative;
+      margin-top: 5px;
+      top: 0;
       left: 0;
       right: auto;
+      float: none;
+      background: @gray;
+      padding-right: 10px;
+      padding-left: 0;
+      li:before {
+        color: darken(@gray, 20%);
+      }
     }
   }
 }
@@ -88,13 +117,25 @@
 
   //Dont't let links get full width
   .navbar-custom-menu .navbar-nav {
+    margin: 0;
     float: right;
+  }
+  .navbar-custom-menu .navbar-nav > li > a {
+    padding-top: 15px;
+    padding-bottom: 15px;
+    line-height: 20px;
   }
 }
 
 // Collapse header
 @media (max-width: @screen-header-collapse) {
   .main-header {
+    position: relative;
+    .logo,
+    .navbar {
+      width: 100%;
+      float: none;
+    }
     .navbar {
       margin: 0;
     }
@@ -106,7 +147,11 @@
 
 .navbar-collapse.pull-left {
   @media (max-width: @screen-sm-max) {
+    float: none !important;
     + .navbar-custom-menu {
+      display: block;
+      position: absolute;
+      top: 0;
       left: 40px;
       right: auto;
     }
