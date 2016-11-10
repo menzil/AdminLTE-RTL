@@ -6,7 +6,7 @@ module.exports = function (grunt) {
   grunt.initConfig({
     watch: {
       // If any .less file changes in directory "build/less/" run the "less"-task.
-      files: ["build/less/*.less", "build/less/skins/*.less", "dist/js/app.js"],
+      files: ["build/less/*.less","build/less-rtl/*.less", "build/less/skins/*.less","build/less-rtl/skins/*.less", "dist/js/app.js"],
       tasks: ["less", "uglify"]
     },
     // "less"-task configuration
@@ -21,6 +21,7 @@ module.exports = function (grunt) {
         files: {
           // compilation.css  :  source.less
           "dist/css/AdminLTE.css": "build/less/AdminLTE.less",
+          "dist/css/AdminLTE-rtl.css": "build/less-rtl/AdminLTE-rtl.less",
           //Non minified skin files
           "dist/css/skins/skin-blue.css": "build/less/skins/skin-blue.less",
           "dist/css/skins/skin-black.css": "build/less/skins/skin-black.less",
@@ -34,7 +35,8 @@ module.exports = function (grunt) {
           "dist/css/skins/skin-green-light.css": "build/less/skins/skin-green-light.less",
           "dist/css/skins/skin-red-light.css": "build/less/skins/skin-red-light.less",
           "dist/css/skins/skin-purple-light.css": "build/less/skins/skin-purple-light.less",
-          "dist/css/skins/_all-skins.css": "build/less/skins/_all-skins.less"
+          "dist/css/skins/_all-skins.css": "build/less/skins/_all-skins.less",
+          "dist/css/skins/_all-skins-rtl.css": "build/less-rtl/skins/_all-skins-rtl.less"
         }
       },
       // Production compresses version
@@ -46,6 +48,7 @@ module.exports = function (grunt) {
         files: {
           // compilation.css  :  source.less
           "dist/css/AdminLTE.min.css": "build/less/AdminLTE.less",
+          "dist/css/AdminLTE-rtl.min.css": "build/less-rtl/AdminLTE-rtl.less",
           // Skins minified
           "dist/css/skins/skin-blue.min.css": "build/less/skins/skin-blue.less",
           "dist/css/skins/skin-black.min.css": "build/less/skins/skin-black.less",
@@ -59,7 +62,8 @@ module.exports = function (grunt) {
           "dist/css/skins/skin-green-light.min.css": "build/less/skins/skin-green-light.less",
           "dist/css/skins/skin-red-light.min.css": "build/less/skins/skin-red-light.less",
           "dist/css/skins/skin-purple-light.min.css": "build/less/skins/skin-purple-light.less",
-          "dist/css/skins/_all-skins.min.css": "build/less/skins/_all-skins.less"
+          "dist/css/skins/_all-skins.min.css": "build/less/skins/_all-skins.less",
+           "dist/css/skins/_all-skins-rtl.min.css": "build/less-rtl/skins/_all-skins-rtl.less"
         }
       }
     },

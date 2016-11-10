@@ -17,35 +17,39 @@
     }
     .navbar-brand {
       color: #333;
-      border-right: 1px solid #eee;
+      border-left: 1px solid #eee;
+      border-right-width: 0;
     }
     .navbar {
       .navbar-variant(#fff; #333; #999; #fff);
       > .sidebar-toggle {
         color: #333;
-        border-right: 1px solid #eee;
+        border-left: 1px solid #eee;
+        border-right-width: 0;
       }
       .navbar-nav {
         > li > a {
-          border-right: 1px solid #eee;
+          border-left: 1px solid #eee;
+          border-right-width: 0;
         }
       }
       .navbar-custom-menu .navbar-nav,
       .navbar-right {
         > li {
           > a {
-            border-left: 1px solid #eee;
-            border-right-width: 0;
+            border-right: 1px solid #eee;
+            border-left-width: 0;
           }
         }
       }
     }
     > .logo {
       .logo-variant(#fff; #333);
-      border-right: 1px solid #eee;
+      border-left: 1px solid #eee;
+      border-right-width: 0;
       @media (max-width: @screen-header-collapse) {
         .logo-variant(#222; #fff);
-        border-right: none;
+        border-left: none;
       }
     }
 
@@ -68,7 +72,8 @@
     }
     .pace-activity {
       border-top-color: #222;
-      border-left-color: #222;
+      border-right-color: #222;
+      border-left-color: transparent;
     }
   }
 }

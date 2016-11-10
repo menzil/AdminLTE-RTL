@@ -340,7 +340,8 @@ h6,
   .sidebar-mini.sidebar-collapse .sidebar-menu > li > .treeview-menu {
     padding-top: 5px;
     padding-bottom: 5px;
-    border-bottom-right-radius: 4px;
+    border-bottom-left-radius: 4px;
+    border-bottom-right-radius: 0;
   }
   .sidebar-mini.sidebar-collapse .sidebar-menu > li:hover > a > span:not(.pull-right),
   .sidebar-mini.sidebar-collapse .sidebar-menu > li:hover > .treeview-menu {
@@ -361,6 +362,7 @@ h6,
     width: auto!important;
     right: 200px !important;
     left: auto !important;
+    top: 10px!important;
   }
   .sidebar-mini.sidebar-collapse .sidebar-menu > li:hover > a > .pull-right-container > .label:not(:first-of-type) {
     display: none;
