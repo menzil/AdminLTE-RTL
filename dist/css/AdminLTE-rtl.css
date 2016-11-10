@@ -359,7 +359,7 @@ h6,
   }
   .sidebar-mini.sidebar-collapse .sidebar-menu > li:hover > a > .pull-right-container {
     float: left;
-    width: auto!important;
+    width: 0!important;
     right: 200px !important;
     left: auto !important;
     top: 10px!important;
